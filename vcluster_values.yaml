@@ -1,0 +1,15 @@
+controlPlane:
+  statefulSet:
+    image:
+      repository: "loft-sh/vcluster-oss"  # Use OSS version instead of Pro
+
+telemetry:
+  enabled: false  # Optional, disable telemetry for local development
+
+sync:
+  toHost:
+    ingresses: 
+      enabled: true
+  fromHost:
+    ingressClasses:
+      enabled: true
